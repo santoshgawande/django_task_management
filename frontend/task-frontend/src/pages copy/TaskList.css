@@ -1,0 +1,28 @@
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-left: 10rem;
+
+  font-size: 0.95rem;
+}
+
+.task-table th, .task-table td {
+  border: 1px solid #0a0202;
+  padding: 8px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: #255a3c;
+  font-weight: bold;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #3e3636;
+}
+
+.task-table tr:hover {
+  background-color: #111010;
+}
+

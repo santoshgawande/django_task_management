@@ -9,14 +9,21 @@ STATUS = (
     ('completed', 'Completed')
 )
 
+PRIORITY = (
+    ('low','Low'),
+    ('medium','Medium'), 
+    ('high',' High')
+)
+
 class Task(models.Model):
     task_id = models.UUIDField(default=uuid4, editable=False, unique=True)
     title = models.CharField(max_length=255)
     description = models.TextField()
     due_date = models.DateField()
-    priority = models.CharField(max_length=50)
+    priority = models.CharField(max_length=10, choices=PRIORITY, default='low')
     assigned_to = models.ForeignKey(User, on_delete=models.CASCADE)
-    status = models.CharField(max_length=10, choices=STATUS, default='pending') # pending, completed
+    status = models.CharField(max_length=10, choices=STATUS, default='pending')
+
 
     def __str__(self):
         return self.title
