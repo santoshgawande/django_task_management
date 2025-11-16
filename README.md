@@ -1,7 +1,5 @@
 # Task Management Application
 
-# Task Management Application
-
 A high-level overview of this project and quick links to backend and frontend docs.
 
 ## Documentation
